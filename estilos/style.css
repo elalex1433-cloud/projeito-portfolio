@@ -30,6 +30,9 @@ header{
   background-color: var(--destaque);
   color: var(--texto);
   padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 #menu ul{
   list-style: none;
@@ -207,8 +210,35 @@ article#video .video-container{
   overflow: hidden;
   border-radius: 8px;
 }
+footer {
+  background-color: var(--destaque);
+color: var(--texto-inverso);
+text-align: center;
+padding: 15px;
+}
+footer a{
+  text-decoration: none;
+  color: var(--texto-inverso);
+  font-weight: bold;
+}
+footer a:hover {
+  color: var(--destaque-inverso);
+}
 
 @media screen and (min-width:768px) {
+   main{
+  grid-template-columns: auto 300px  1fr auto;
+   }
+   section#ficha{
+  grid-column: 2 / 3;
+  height: fit-content;
+  position: sticky;
+  top: 65px;
+   }
+   section#detalhes{
+  grid-column: 3 / 4;
+   }
+
   #skill-container{
     grid-template-columns: 1fr 1fr;
   }
@@ -224,4 +254,5 @@ article#video .video-container{
       max-width: 20%;
       max-height: 130px;
     }
+
 }
